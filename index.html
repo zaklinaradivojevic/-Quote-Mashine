@@ -1,1 +1,66 @@
-
+<html> 
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Quote Mashine</title> 
+ <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+</head> 
+<body id="body" align="center"> 
+<div id="backG">
+<div class="wrapper" id="quote-box">   
+<div class="conteiner"> 
+<div class="row">  
+<h1 class="ml2"> Quote Mashine</h1> 
+<blockquote>
+<i class="fa fa-quote-left" aria-hidden="true" style="float:left;font-size:15px;"></i>
+<p id="GFG_UP" style="font-size: 15px; 
+              font-weight: bold;"></p>     
+<div  id="quoteDisplay" style=" text-shadow: 20px 20px 50px rgb(0,0,0,0.4);
+  font-family: 'Droid serif', serif;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic; 
+  line-height: 40px;
+  text-align: center;"></div>
+  <i class="fa fa-quote-right" aria-hidden="true" style="float:right;font-size:15px;"></i>
+  </blockquote>  
+   <a href="https://twitter.com/share?url="+encodeURIComponent(document.URL);target="_blank" id="tweetShare"  class="fa fa-twitter" style="font-size:38px; text-decoration: none;"></a>
+  <button class="button" onclick="GFG_Fun() , newQuote()">New Quote</button> 
+   </div>
+   </div>
+   </div>
+   </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script> 
+    var el_up = document.getElementById('GFG_UP'); 
+    var rgbValue = [255, 0, 0]; 
+     el_up.innerHTML =  "Quotes."; 
+     function setColor() { 
+            rgbValue[0] = Math.round(Math.random() * 255); 
+            rgbValue[1] = Math.round(Math.random() * 255); 
+            rgbValue[2] = Math.round(Math.random() * 255); 
+            var color = Math.round(((parseInt(rgbValue[0]) * 299) + 
+                (parseInt(rgbValue[1]) * 587) + 
+                (parseInt(rgbValue[2]) * 114)) / 1000); 
+      var textColor = (color > 125) ? 'black' : 'white'; 
+      var backColor =  
+                'rgb(' + rgbValue[0] + ', ' + rgbValue[1] + ', ' 
+             + rgbValue[2] + ')'; 
+     $('#backG').css('color', textColor); 
+            $('#backG').css('background-color', backColor); 
+        } 
+      function GFG_Fun() { 
+            setColor(); 
+        } 
+    </script> 
+</body> 
+</html>
