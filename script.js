@@ -73,3 +73,8 @@ anime.timeline({loop: true})
     delay: 1000
   });
 
+function tweetCurrentQuote() {
+    var quote = document.getElementById('quoteDisplay').innerText;
+    var twitterUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(quote);
+    window.open(twitterUrl, "_blank");
+}
